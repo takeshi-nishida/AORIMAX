@@ -1,0 +1,65 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+#star-table{
+    height:100%;
+    width:100%;
+    bottom:0px;
+    top:0px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#star-table > tbody > tr td:nth-of-type(odd) {
+  background-color: #E3F0FF;
+}
+
+td {
+   border: solid 1px #161E40;
+}
+
+#star-row{
+    height:90%;
+    max-height: 90%;
+    text-align:center;
+}
+
+#label-row{
+    height: 10%;
+    font-size: 5vmin;
+    text-align: center;
+}
+
+#star-row > td{
+    position: relative;
+    vertical-align:bottom;
+}
+
+#label-row > td {
+    padding: 1vmin;
+}
+
+.star{
+    position: relative;
+    height: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.star1{ background-color: #5779FF; color: #FFD357; width: 70%;}
+.star10{ background-color: #415BBF; color: #FFD357; width: 80%;}
+.star100{ background-color: #2B3D7F; color: #FFD357; width: 90%;}
+.star1000{ background-color: #161E40; color: #FFD357; width: 100%;}
+
+#button-ui {
+    font-size: 3vmin;
+}
+
+.voteButton, .aoriButton {
+    font-size: 4vmin;
+}

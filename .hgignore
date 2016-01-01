@@ -1,0 +1,8 @@
+syntax: glob
+
+.c9/*
+.hg/*
+data/*
+node_modules/*
+mongod
+README.md
