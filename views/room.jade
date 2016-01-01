@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/aorimax.css")
+        title AORIMAX
+    body
+        table#star-table.hidden-xs.hidden-sm
+            tr#star-row
+                each name in room.names
+                    td(id="#{name}", data-name="#{name}", data-count="#{counts[name]}")
+            tr#label-row
+                each name in room.names
+                    td(data-name="#{name}")
+                        svg.sendVote(width="100%", height="100%")
+                            g(font-size="2vw")
+                                text(x="50%", y="50%", text-anchor="middle", writing-mode="tb") #{name}
+        .container-fluid.row.visible-xs.visible-sm#button-ui
+            each name in room.names
+                .col-sm-4.col-xs-4
+                    .button-panel.panel.panel-primary(data-name="#{name}",  id="#{name}-panel")
+                        .text-center #{name}
+                        .panel-body
+                            .btn-group.btn-group-justified
+                                a.voteButton.btn.btn-primary(role="button"): span.glyphicon.glyphicon-thumbs-up
+                                a.aoriButton.btn.btn-danger(role="button"): span.glyphicon.glyphicon-flash
+        script.
+            var roomId = '#{room.id}';
+        script(src="/jquery-2.1.4.min.js")
+        script(src="/jquery-ui.min.js")
+        script(src="/velocity.min.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="/room.js")

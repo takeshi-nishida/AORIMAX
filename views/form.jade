@@ -1,0 +1,14 @@
+extends layout
+
+block contents
+    h1 Create Room
+    if message
+        div #{message}
+    form(method="POST", action="/")
+        .form-group
+            label(for="room[title]") Title
+            input.form-control(type="text", name="room[title]")
+        .form-group
+            label(for="room[names]") Participants (comma separated)
+            input.form-control(type="text", name="room[names]")
+        button.btn.btn-default(type="submit") Create

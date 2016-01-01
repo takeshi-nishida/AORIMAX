@@ -1,0 +1,10 @@
+extends layout
+
+block contents
+    h1 Rooms
+    if message
+        div #{message}
+    table.table.table-striped
+        each room in rooms
+            tr
+                td: a(href="/rooms/#{room.id}")=room.title
